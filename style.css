@@ -1,0 +1,399 @@
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+#head {
+    height:10%;
+    min-height:60px;
+    min-width: 1250px;
+}
+
+#head-left {
+    height: 60px;
+    width:  540px;
+    padding-left: 24px;
+    float: left;
+}
+
+#head-left>a {
+    margin: 19px 24px 0 0;
+    /* display 能让margin 生效 */
+    display: inline-block;
+    color: #222;
+    font: 13px/23px Arial,sans-serif;
+    /* 去除下划线 */
+    text-decoration: none;
+    /* float让标题之间的空隙为0 */
+    float: left;
+}
+
+#head-left a:hover {
+    color: #4e6ef2;
+}
+
+#head-left-more {
+    margin:19px 24px 0 0;
+    display: inline-block;
+    position: relative;
+}
+
+#head-left-more a {
+    display: inline-block;
+    font: 13px/23px Arial,sans-serif;
+    padding-bottom: 19px;
+    text-decoration: none;
+    float: left;
+    color: #222;
+}
+
+#head-left-more #hide-div {
+    position: absolute;
+    top: 29px;
+    right: -12px;
+    width: 228px;
+    height: 290px;
+    padding-top: 8px;
+    background: #fff;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 15%);
+    border-radius: 12px;
+    display: none;
+}
+
+#hide-div img {
+    text-align: center;
+    height: 300px;
+    width: 230px;
+    margin-top: -10px;
+}
+
+#head-left-more:hover #hide-div {
+    display: block;
+}
+
+#head-right {
+    height: 60px;
+    width: 130px;
+    padding: 0 24px 0 200px;
+    float: right;
+    text-align: center;
+}
+
+#head-right span {
+    margin: 19px 0 0 24px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    color: #222;
+    font: 13px/23px Arial,sans-serif;
+    float: left;
+}
+
+#head-right span:hover {
+    color: #4e6ef2;
+    cursor: pointer;
+}
+
+#head-right>a {
+    width: 48px;
+    height: 24px;
+    /* 实现文字垂直居中 */
+    line-height: 24px;
+
+    background-color: #4e6ef2;
+    color: white;
+    font-weight: 400;
+    border-radius: 6px;
+    /* 设置文字在行内的垂直位置，vertical一般用于行内元素或者表格元素 */
+    vertical-align: middle;
+    text-decoration: none;
+
+    display: inline-block;
+    margin-left: 32px;
+    margin-top: 18px;
+    font-size: 13px;
+
+    float: left;
+}
+
+#head-right>a:hover {
+    background-color: #315efb;
+}
+
+#head-right div {
+    width: 84px;
+    height: auto;
+    top: 48px;
+    /* 如果上左 和 下右 的内边距一样 则可以直接设置 两个边距即可 */
+    padding: 8px 0;
+}
+
+#menu>a {   
+    font: 13px/23px Arial,sans-serif;
+    text-decoration: none;
+    color: #222;
+    background-color: #fff;
+    right: 10px;
+    text-align: left;
+}
+
+#menu a:hover {
+    color: #4e6ef2;
+}
+
+.box {
+    background: #fff;
+    border-radius: 12px;
+}   
+
+#head-right #setting-menu {
+    width: 84px;
+    padding: 8px 0;
+    top: 42px;
+    position: absolute;
+    right: 75px;
+    z-index: 999;
+    text-align: left;
+    display: none;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+#head-right span:hover + #setting-menu,
+#setting-menu:hover {
+    display: block;
+}
+
+#menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#menu a {
+    display: block;
+    padding: 3px 16px;
+    margin: 0;
+    color: #333;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration: none;
+}
+
+#body 
+{
+    height: 80%;
+    min-height: 462px;
+    width: 658px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 搜索框整体 */
+#search {
+    height: 44px;
+    background-color: aliceblue;    
+}
+/* 搜索框 容器*/
+#search-input {
+    height: 44px;
+    width: 550px;
+    float: left;
+}
+
+/* 子代选择器 搜索框*/
+#search-input input{
+    height: 16px;
+    width: 443px;
+    border:2px solid #c4c7ce;
+    padding: 12px 87px 12px 16px;
+    border-radius: 10px 0 0 10px;
+    border-right-color: #4e6ef2;
+    font-size: 16px;
+    /* 处理边框颜色 */
+}
+
+/* 搜索框悬停装态 */
+#search-input input:hover {
+    border-color: #a7aab5;
+    border-right-color: #4e6ef2;
+}
+
+/* 搜索框点击状态 */
+#search-input input:focus {
+    /* 清除原本的黑框 */
+    outline: none;
+    border-color: #4e6ef2;
+}
+
+/* 搜索按钮 容器*/
+#search-btn {
+    height: 44px;
+    width: 108px;
+    float: left;
+}
+
+/* 搜索按钮 */
+#search-btn input{
+    height:44px;
+    width:108px;
+    border: 0; 
+    color: white;
+    /* 去除边框 */
+    border-radius: 0 10px 10px 0;   
+    background-color: #4e6ef2;
+    font-size: 17px;
+    font-weight: 400;
+    /* 更改鼠标悬停样式 */
+    cursor: pointer;
+}
+
+/* 搜索按钮悬停状态 */
+#search-btn input:hover {
+    background-color:#4662d9;
+}
+
+/* 百度热搜 */
+#hot-search {
+    height: 24px;
+    width: 654px;
+    margin-top: 45px;
+}
+
+/* 百度热搜左边按钮 */
+#hot-search-left {
+    float: left;
+    text-decoration: none;
+    color: #222222;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: cIconfont;
+}
+
+/* 换一换 */
+#hot-search-right {
+    float: right;
+    text-decoration: none;
+    color: #626675;
+    margin-left: 2px;
+    font: 14px/14px ;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#hot-search div:hover {
+    color: #4e6ef2;
+}
+
+/* 热搜内容 */
+#hot-search-content {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.hot {
+    color: white;
+    background-color:  #f60;
+    padding: 0 2px;
+    margin-left: 6px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+}
+
+#hot-search ul {
+    margin-top: 10px;
+}
+
+#hot-search-content li {
+    height: 36px;
+    width: 306px;
+    line-height: 36px;
+    white-space: nowrap;
+    float: left;
+    list-style: none;
+    display: list-item;
+}
+
+.hot-search-odd {
+    margin-right: 20px;
+}
+
+.hot-search-even {
+    margin-left: 20px;
+}
+
+#hot-search-content span {
+    width: 22px;
+    height: 18px;
+    margin-right: 4px;
+}
+
+#hot-search-content a {
+    text-decoration: none;
+}
+
+.hot-search-title {
+    color: rgb(34 34 34);
+    font-family:Arial, sans-serif;
+    font-size:16px;
+}
+
+#hot-search-content a:hover {
+    color: #4e6ef2;
+    text-decoration: underline;
+}
+/* 前面的数字颜色 */
+#no1 {
+    color: rgb(254, 45, 70);
+}
+
+#no2 {
+    color: rgb(255, 102, 0);
+}
+
+#no3 {
+    color: rgb(250, 169, 14);
+}
+
+.other {
+    color: rgb(145, 149, 163);
+}
+
+#foot {
+    height: 10%;
+    min-height: 60px;
+    min-width: 1250px;
+}
+
+#foot-menu {
+    width: 100%;
+    position: fixed;
+    z-index: 302;
+    bottom: 0;
+    left: 0;
+    height: 39px;
+    padding-top: 1px;
+    line-height: 39px;   
+    background: #fff;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+#foot-menu a:hover{
+    color: #222222;
+}
+
+.text-color{
+    font-size: 12px;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.lh {
+    display: inline;
+    margin-right: 14px;
+}
